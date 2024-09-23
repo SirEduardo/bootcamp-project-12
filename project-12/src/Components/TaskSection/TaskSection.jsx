@@ -2,7 +2,7 @@ import { Droppable } from "../../Components/Droppable/Droppable";
 import { TaskCards } from "../../Components/TaskCards/TaskCards";
 
 export const TaskSection = ({ title, tasks, status, color, updateTaskStatus, deleteTask }) => (
-    <div className="flex flex-col pl-3 gap-5 pt-10 text-center">
+    <div className="flex flex-col pl-3 gap-5 pt-10 text-center min-w-72">
       <h2 className={`text-4xl border-b-2 ${color}`}>
         {title}
       </h2>
