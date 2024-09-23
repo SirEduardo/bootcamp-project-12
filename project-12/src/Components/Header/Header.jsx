@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="h-20 bg-slate-500 flex items-center justify-center">
       <nav className="w-full">
-        <ul className="w-full flex justify-around font-semibold">
+        <ul className="w-full flex justify-evenly font-semibold">
           <li>
             <NavLink
               to="/"
