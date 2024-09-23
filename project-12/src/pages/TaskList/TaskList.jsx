@@ -3,7 +3,6 @@ import { TaskContext } from "../../Components/TaskContext/TaskContext";
 import { TaskSection } from "../../Components/TaskSection/TaskSection";
 
 const TaskList = () => {
-  
   const { tasks, deleteTask, updateTaskStatus } = useContext(TaskContext);
 
   if (!Array.isArray(tasks)) {
@@ -48,4 +47,4 @@ const TaskList = () => {
   );
 };
 
-export default TaskList
+export default TaskList;
