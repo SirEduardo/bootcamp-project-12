@@ -3,7 +3,6 @@ import { TaskContext } from "../../Components/TaskContext/TaskContext";
 import { TaskSection } from "../../Components/TaskSection/TaskSection";
 
 const TaskList = () => {
-  console.log("soy la lista y me renderizo");
   
   const { tasks, deleteTask, updateTaskStatus } = useContext(TaskContext);
 
