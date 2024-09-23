@@ -9,6 +9,12 @@ const TaskReducer = (state, action) => {
       return state.filter((task) => task.id !== action.payload);
     case "CARGAR_TAREAS":
       return action.payload || [];
+      case "ACTUALIZAR_ESTADO_AREA":
+        return state.map((task) =>
+          task.id === action.payload.id
+        ? { ...task, status: action.payload.status }
+        : task 
+        )
     default:
       return state;
   }
@@ -34,8 +40,12 @@ useEffect(() => {
 const deleteTask = (id) => {
   dispatch({ type: "ELIMINAR_TAREA", payload: id });
 };
+
+const updateTaskStatus = (id, status) => {
+  dispatch({ type: "ACTUALIZAR_ESTADO_AREA", payload: { id, status } })
+}
   
- return { tasks, addTask, deleteTask }
+ return { tasks, addTask, deleteTask, updateTaskStatus }
 }
 
 export default useTasks
