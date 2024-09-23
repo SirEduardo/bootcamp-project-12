@@ -20,7 +20,7 @@ const TaskList = () => {
   const completedTasks = tasks.filter((task) => task.status === "completed");
 
   return (
-    <div className="min-h-screen bg-slate-300 flex justify-around gap-5 pt-10 pb-10 max-lg:flex-col max-lg: items-center">
+    <div className="min-h-screen bg-slate-300 flex justify-around gap-5 pt-10 pb-10 max-lg:flex-col max-lg:items-center">
       <TaskSection
         title="Tareas"
         tasks={notStartedTasks}
